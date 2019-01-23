@@ -186,7 +186,8 @@ declare namespace OAuth {
    */
   export interface Token {
     key: string;
-    secret: string;
+    secret?: string;
+    verifier?: string;
   }
 
 }

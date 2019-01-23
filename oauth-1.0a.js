@@ -76,6 +76,10 @@ OAuth.prototype.authorize = function(request, token) {
         oauth_data.oauth_token = token.key;
     }
 
+    if (token.verifier !== undefined) {
+        oauth_data.oauth_verifier = token.verifier;
+    }
+
     if(!request.data) {
         request.data = {};
     }
